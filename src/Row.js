@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "./axios";
 
-function Row({ title, fetchURL }) {
-	const [movies, setMovies] = useState([]);
+const base_url = "https://image.tmdb.org/t/p/original/";
 
+function Row({ title, fetchUrl }) {
+    const [movies, setMovies] = useState([]);
+    console.table(fetchUrl);
 	useEffect(() => {
 		async function fetchData() {
-			const request = await axios.get(fetchURL);
-			setMovies(request.data.results);
+            const request = await axios.get(fetchUrl);
+            
+            setMovies(request.data.results);
+            console.log(request.data.result);
 			return request;
 		}
 		fetchData();
-	}, [fetchURL]);
-
-	console.log(movies);
+	}, [fetchUrl]);
 
 	return (
 		<div>
@@ -22,7 +24,11 @@ function Row({ title, fetchURL }) {
 			{/* container - posters */}
 			<div className="row">
 				<h2>{title}</h2>
-				<div className="row_posters"></div>
+				<div className="row_posters">
+					{movies.map((movie) => (
+						<img src={movie.poster_path} alt="{movie.name}" />
+					))}
+				</div>
 			</div>
 		</div>
 	);

@@ -8,7 +8,7 @@ function App() {
 		<div className="App">
 			<h1>Netflix-Clone</h1>
 			<Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} />
-			<Row title="Trending Now" fetchUrl={requests.Trending}/>
+			<Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
 		</div>
 	);
 }

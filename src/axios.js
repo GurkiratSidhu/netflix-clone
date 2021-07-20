@@ -5,6 +5,6 @@ import axios from "axios";
     baseURL: "https://api.themoviedb.org/3",
 });
 
-instance.get('/foo-bar');
+// instance.get('/foo-bar');
 
 export default instance;
