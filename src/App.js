@@ -11,16 +11,45 @@ function App() {
 			<Row
 				title="NETFLIX ORIGINALS"
 				fetchUrl={requests.fetchNetflixOriginals}
+				isLargeRow
 			/>
-			<Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchTrending} isLargeRow />
 			<Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-			<Row title="Comedy Series" fetchUrl={requests.fetchComedySeries} />
-			<Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-			<Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-			<Row title="Animated Movies" fetchUrl={requests.fetchAnimatedMovies} />
-			<Row title="Thriller Movies" fetchUrl={requests.fetchThrillerMovies} />
-			<Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-			<Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+			<Row
+				title="Comedy Series"
+				fetchUrl={requests.fetchComedySeries}
+				isLargeRow
+			/>
+			<Row
+				title="Action Movies"
+				fetchUrl={requests.fetchActionMovies}
+				isLargeRow
+			/>
+			{/* <Row
+				title="Comedy Movies"
+				fetchUrl={requests.fetchComedyMovies}
+				isLargeRow
+			/> */}
+			<Row
+				title="Animated Movies"
+				fetchUrl={requests.fetchAnimatedMovies}
+				isLargeRow
+			/>
+			<Row
+				title="Thriller Movies"
+				fetchUrl={requests.fetchThrillerMovies}
+				isLargeRow
+			/>
+			<Row
+				title="Romance Movies"
+				fetchUrl={requests.fetchRomanceMovies}
+				isLargeRow
+			/>
+			<Row
+				title="Documentaries"
+				fetchUrl={requests.fetchDocumentaries}
+				isLargeRow
+			/>
 		</div>
 	);
 }
