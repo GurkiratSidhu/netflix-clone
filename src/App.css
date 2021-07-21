@@ -1,7 +1,8 @@
 * {
 	margin: 0;
-	background-color: black;
 }
-h2 {
+
+.App {
+	background-color: black;
 	color: white;
 }
